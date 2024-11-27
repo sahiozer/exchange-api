@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package gold;
+
+service GoldService {
+    rpc getGoldPrice (GoldPriceRequest) returns (GoldPriceResponse);
+}
+
+message GoldPriceRequest {
+    string currency = 1;
+}
+
+message GoldPriceResponse {
+    string price = 1;
+}
