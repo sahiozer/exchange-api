@@ -31,7 +31,7 @@ public class MockExchangeService extends ExchangeServiceGrpc.ExchangeServiceImpl
 
         // Build the response
         Exchange.BankRatesResponse response = Exchange.BankRatesResponse.newBuilder()
-                .addAllRates(bankRates) // Add all rates to the response
+                .addAllRates(bankRates)
                 .build();
 
         // Send the response
