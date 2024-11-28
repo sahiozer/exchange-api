@@ -3,18 +3,18 @@ package com.service;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import shared.Exchange;
-import shared.ExchangeServiceGrpc;
+import shared.GoldServiceGrpc;
 
 import java.util.List;
 import java.util.Random;
 
 @GrpcService
-public class MockExchangeService extends ExchangeServiceGrpc.ExchangeServiceImplBase {
+public class MockExchangeGoldService extends GoldServiceGrpc.GoldServiceImplBase {
 
     private final Random random = new Random();
 
     @Override
-    public void getBankRates(Exchange.EmptyRequest request, StreamObserver<Exchange.BankRatesResponse> responseObserver) {
+    public void getGoldRates(Exchange.EmptyRequest request, StreamObserver<Exchange.BankRatesResponse> responseObserver) {
         // Mock data for 10 banks
         List<Exchange.BankRate> bankRates = List.of(
                 createMockBankRate("Bank A"),
@@ -44,8 +44,8 @@ public class MockExchangeService extends ExchangeServiceGrpc.ExchangeServiceImpl
         float sellingRate = buyingRate + 10;
         return Exchange.BankRate.newBuilder()
                 .setBankName(bankName)
-                .setGoldBuyingRate(buyingRate)
-                .setGoldSellingRate(sellingRate)
+                .setBuyingRate(buyingRate)
+                .setSellingRate(sellingRate)
                 .build();
     }
 

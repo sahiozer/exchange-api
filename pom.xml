@@ -43,7 +43,6 @@
 			<version>3.24.3</version> <!-- Latest stable version -->
 		</dependency>
 
-		<!-- Lombok for reducing boilerplate code -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -58,7 +57,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Spring Boot Starter Test for unit testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -82,7 +80,6 @@
 
 	<build>
 		<plugins>
-			<!-- Spring Boot Maven Plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -91,7 +88,6 @@
 	</build>
 
 	<repositories>
-		<!-- Maven Central -->
 		<repository>
 			<id>maven-central</id>
 			<url>https://repo.maven.apache.org/maven2</url>
